@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: rgba(0, 0, 0, .12);
+  --color-border-light: rgba(0, 0, 0, .06);
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #ffffff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #F3F3F7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #ffffff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #ffffff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: rgba(0, 0, 0, .5);
+  --color-shadow: rgba(0, 0, 0, .08);
+  --color-hover: rgba(0, 0, 0, .05);
+  --color-tooltip-bg: rgba(0, 0, 0, .85);
+  --color-tooltip-text: #ffffff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: rgba(66, 0, 219, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .08);
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #F3F3F7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #F3F3F7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333333;
+  --color-graph-node-text-dim: #7F8C8D;
+  --color-graph-edge-default: #95A5A6;
+  --color-graph-edge-cross: #E67E22;
+  --color-graph-edge-text: #666666;
+  --color-graph-edge-stroke: #ffffff;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #C0392B;
+  --color-graph-external-border: #95A5A6;
+  --color-graph-cat-file: #3498DB;
+  --color-graph-cat-folder: #7F8C8D;
+  --color-graph-cat-file-aggregate: #2980B9;
+  --color-graph-cat-class: #9B59B6;
+  --color-graph-cat-function: #2ECC71;
+  --color-graph-cat-method: #1ABC9C;
+  --color-graph-cat-variable: #F39C12;
+  --color-graph-cat-import: #D35400;
+  --color-graph-cat-module: #5B6ABF;
+  --color-graph-cat-concept: #E74C3C;
+  --color-graph-cat-person: #FF6B6B;
+  --color-graph-cat-org: #4ECDC4;
+  --color-graph-cat-organization: #4ECDC4;
+  --color-graph-cat-product: #A29BFE;
+  --color-graph-cat-metric: #FD79A8;
+  --color-graph-cat-location: #34495E;
+  --color-graph-cat-date: #E056A0;
+  --color-graph-cat-code: #3498DB;
+  --color-graph-cat-doc: #7F8C8D;
+  --color-graph-cat-url: #00B894;
+  --color-graph-cat-email: #6C5CE7;
+  --color-graph-cat-unknown: #BDC3C7;
+  --color-graph-rel-contains: #BDC3C7;
+  --color-graph-rel-extends: #9B59B6;
+  --color-graph-rel-implements: #3498DB;
+  --color-graph-rel-imports: #E67E22;
+  --color-graph-rel-uses: #2ECC71;
+  --color-graph-rel-calls: #27AE60;
+  --color-graph-rel-references: #F39C12;
+  --color-graph-rel-related-to: #95A5A6;
+  --color-graph-rel-works-on: #E74C3C;
+  --color-graph-rel-owns: #1ABC9C;
+  --color-graph-rel-depends-on: #E67E22;
+  --color-graph-rel-parent-of: #BDC3C7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<style>
+body {
+  background: #f9f9f9;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 24px;
+  color: #111;
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 16px;
+  padding: 32px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.header-info h1 {
+  margin: 0 0 6px 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.header-subtitle {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.contact-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.tag {
+  background: rgba(124, 58, 237, 0.2);
+  color: #c4b5fd;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.summary-box {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.kpi-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.kpi-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4c1d95;
+  font-family: monospace;
+}
+
+.kpi-label {
+  font-size: 12px;
+  color: #666;
+  margin-top: 6px;
+}
+
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.section-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #4c1d95;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title::before {
+  content: "";
+  width: 4px;
+  height: 16px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 2px;
+}
+
+.radar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 18px;
+  border-left: 2px solid #e0e0e0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+}
+
+.timeline-role { font-weight: 600; font-size: 14px; color: #4c1d95; }
+.timeline-company { font-size: 13px; color: #7c3aed; margin-top: 2px; }
+.timeline-period { font-size: 12px; color: #999; margin-top: 2px; }
+.timeline-desc { font-size: 13px; color: #555; margin-top: 4px; line-height: 1.5; }
+
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tag { background: #ede9fe; color: #5b21b6; padding: 6px 14px; border-radius: 16px; font-size: 13px; font-weight: 500; }
+.skill-tag.highlight { background: rgba(255,255,255,0.25); color: #fff; }
+
+.match-item { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+.match-item:last-child { border-bottom: none; }
+.match-header { display: flex; justify-content: space-between; align-items: center; }
+.match-role { font-weight: 600; font-size: 14px; color: #4c1d95; }
+.match-score { font-size: 13px; font-weight: 600; color: #7c3aed; background: #ede9fe; padding: 2px 10px; border-radius: 10px; }
+.match-reason { font-size: 12px; color: #666; margin-top: 4px; }
+
+.highlight-list { list-style: none; padding: 0; margin: 0; }
+.highlight-list li { padding: 8px 0; font-size: 13px; color: #333; border-bottom: 1px solid #f5f5f5; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+.highlight-list li::before { content: "★"; color: #7c3aed; flex-shrink: 0; }
+.highlight-list li:last-child { border-bottom: none; }
+
+.full-width { grid-column: 1 / -1; }
+</style>
+</head>
+<body>
+
+<!-- ===== 头部 ===== -->
+<div class="profile-header">
+  <div class="avatar">{{姓氏}}</div>
+  <div class="header-info">
+    <h1>{{姓名}}</h1>
+    <div class="header-subtitle">{{当前职位}} · {{公司}} · {{领域}}</div>
+    <div class="contact-row">
+      <span>📧 {{邮箱}}</span>
+      <span>📱 {{电话}}</span>
+      <span>📍 {{城市}}</span>
+      <span>🔗 {{LinkedIn}}</span>
+    </div>
+    <div class="tags">
+      <span class="tag">{{标签1}}</span>
+      <span class="tag">{{标签2}}</span>
+      <span class="tag">{{标签3}}</span>
+      <span class="tag">{{标签4}}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 摘要 ===== -->
+<div class="summary-box">
+  <strong>画像摘要：</strong>{{2-3句话总结核心竞争力和职业特点}}
+</div>
+
+<!-- ===== KPI ===== -->
+<div class="kpi-grid">
+  <div class="kpi-card"><div class="kpi-value">{{数字1}}</div><div class="kpi-label">{{标签1}}</div></div>
+  <div class="kpi-card"><div class="kpi-value">{{数字2}}</div><div class="kpi-label">{{标签2}}</div></div>
+  <div class="kpi-card"><div class="kpi-value">{{数字3}}</div><div class="kpi-label">{{标签3}}</div></div>
+  <div class="kpi-card"><div class="kpi-value">{{数字4}}</div><div class="kpi-label">{{标签4}}</div></div>
+</div>
+
+<!-- ===== 双栏 ===== -->
+<div class="grid-2col">
+
+  <!-- 能力雷达 (纯SVG六边形，6个维度，禁止用进度条) -->
+  <div class="section-card">
+    <div class="section-title">能力雷达</div>
+    <div class="radar-container">
+      <!-- 以下是完整示例（评分：架构9 行业8 客户8 技术8 赋能7 执行8）-->
+      <svg style="width:100%; max-width:380px;" viewBox="0 0 380 300">
+        <!-- 背景六边形网格（5层，从外到内） -->
+        <polygon points="150,40 245,95 245,205 150,260 55,205 55,95" fill="none" stroke="#e8e8e8" stroke-width="1"></polygon>
+        <polygon points="150,62 226,106 226,194 150,238 74,194 74,106" fill="none" stroke="#e8e8e8" stroke-width="1"></polygon>
+        <polygon points="150,84 207,117 207,183 150,216 93,183 93,117" fill="none" stroke="#e8e8e8" stroke-width="1"></polygon>
+        <polygon points="150,106 188,128 188,172 150,194 112,172 112,128" fill="none" stroke="#e8e8e8" stroke-width="1"></polygon>
+        <polygon points="150,128 169,139 169,161 150,172 131,161 131,139" fill="none" stroke="#e8e8e8" stroke-width="1"></polygon>
+        <!-- 6条轴线 -->
+        <line x1="150" y1="150" x2="150" y2="40" stroke="#ddd" stroke-width="0.5"></line>
+        <line x1="150" y1="150" x2="245" y2="95" stroke="#ddd" stroke-width="0.5"></line>
+        <line x1="150" y1="150" x2="245" y2="205" stroke="#ddd" stroke-width="0.5"></line>
+        <line x1="150" y1="150" x2="150" y2="260" stroke="#ddd" stroke-width="0.5"></line>
+        <line x1="150" y1="150" x2="55" y2="205" stroke="#ddd" stroke-width="0.5"></line>
+        <line x1="150" y1="150" x2="55" y2="95" stroke="#ddd" stroke-width="0.5"></line>
+        <!-- 数据polygon（只有1个！6个点对应6个维度） -->
+        <!-- 查坐标表：架构9→150,51 行业8→226,106 客户8→226,194 技术8→150,238 赋能7→83,189 执行8→74,106 -->
+        <polygon points="150,51 226,106 226,194 150,238 83,189 74,106" fill="rgba(124,58,237,0.15)" stroke="#7c3aed" stroke-width="2"></polygon>
+        <!-- 6个数据点 -->
+        <circle cx="150" cy="51" r="4" fill="#7c3aed"></circle>
+        <circle cx="226" cy="106" r="4" fill="#7c3aed"></circle>
+        <circle cx="226" cy="194" r="4" fill="#7c3aed"></circle>
+        <circle cx="150" cy="238" r="4" fill="#7c3aed"></circle>
+        <circle cx="83" cy="189" r="4" fill="#7c3aed"></circle>
+        <circle cx="74" cy="106" r="4" fill="#7c3aed"></circle>
+        <!-- 6个维度标签 -->
+        <text x="150" y="28" text-anchor="middle" font-size="11" fill="#555">架构设计</text>
+        <text x="255" y="95" text-anchor="start" font-size="11" fill="#555">行业深度</text>
+        <text x="255" y="210" text-anchor="start" font-size="11" fill="#555">客户影响力</text>
+        <text x="150" y="280" text-anchor="middle" font-size="11" fill="#555">技术广度</text>
+        <text x="45" y="210" text-anchor="end" font-size="11" fill="#555">团队赋能</text>
+        <text x="45" y="95" text-anchor="end" font-size="11" fill="#555">交付执行</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 职业轨迹 -->
+  <div class="section-card">
+    <div class="section-title">职业轨迹</div>
+    <div class="timeline-item">
+      <div class="timeline-role">{{职位}}</div>
+      <div class="timeline-company">{{公司}}</div>
+      <div class="timeline-period">{{时间}} · {{时长}}</div>
+      <div class="timeline-desc">{{核心成果}}</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-role">{{职位}}</div>
+      <div class="timeline-company">{{公司}}</div>
+      <div class="timeline-period">{{时间}} · {{时长}}</div>
+      <div class="timeline-desc">{{核心成果}}</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-role">{{职位}}</div>
+      <div class="timeline-company">{{公司}}</div>
+      <div class="timeline-period">{{时间}} · {{时长}}</div>
+      <div class="timeline-desc">{{核心成果}}</div>
+    </div>
+  </div>
+
+  <!-- 技能标签 -->
+  <div class="section-card">
+    <div class="section-title">技能标签</div>
+    <div class="skill-tags">
+      <span class="skill-tag highlight">{{核心认证}}</span>
+      <span class="skill-tag">{{技能}}</span>
+      <span class="skill-tag">{{技能}}</span>
+      <span class="skill-tag">{{技能}}</span>
+      <span class="skill-tag">{{技能}}</span>
+    </div>
+  </div>
+
+  <!-- 岗位匹配推荐 -->
+  <div class="section-card">
+    <div class="section-title">岗位匹配推荐</div>
+    <!-- 根据简历内容与知识库中的JD进行匹配，推荐2-3个适合的岗位 -->
+    <div class="match-item">
+      <div class="match-header">
+        <span class="match-role">{{岗位名称1}}</span>
+        <span class="match-score">匹配度 {{百分比}}%</span>
+      </div>
+      <div class="match-reason">匹配点：{{2-3个关键匹配原因}}</div>
+    </div>
+    <div class="match-item">
+      <div class="match-header">
+        <span class="match-role">{{岗位名称2}}</span>
+        <span class="match-score">匹配度 {{百分比}}%</span>
+      </div>
+      <div class="match-reason">匹配点：{{2-3个关键匹配原因}}</div>
+    </div>
+    <div class="match-item">
+      <div class="match-header">
+        <span class="match-role">{{岗位名称3}}</span>
+        <span class="match-score">匹配度 {{百分比}}%</span>
+      </div>
+      <div class="match-reason">匹配点：{{2-3个关键匹配原因}}</div>
+    </div>
+  </div>
+
+  <!-- 核心亮点 -->
+  <div class="section-card full-width">
+    <div class="section-title">核心亮点</div>
+    <ul class="highlight-list">
+      <li>{{亮点1}}</li>
+      <li>{{亮点2}}</li>
+      <li>{{亮点3}}</li>
+      <li>{{亮点4}}</li>
+      <li>{{亮点5}}</li>
+    </ul>
+  </div>
+</div>
+
+
+
+</body></html>
