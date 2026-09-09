@@ -54,31 +54,23 @@
 - 基于简历事实比较候选人，并提供岗位匹配建议。
 - 查询面试进展、流程和统计信息，同时展示信息出处。
 - 在信息不足时主动追问，而不是凭空补全。
-- 读取固定 HTML 模板，生成可直接展示的候选人人才画像。
+- 基于简历事实生成可直接展示的 HTML 候选人人才画像。
 
 核心流程：
 
-1. 创建 `HR` Space，上传根目录中的样例简历和 `面试进展跟踪表.xlsx`。
+1. 创建 `简历` Space，上传根目录中的样例简历和 `面试进展跟踪表.xlsx`。
 2. 创建 `岗位 JD` Space，上传模块 `JD/` 中的岗位描述。
 3. 创建“HR 面试助手”Chat Agent，配置手册中的 Persona / Prompt。
-4. 将两个 Space 设为知识源，并上传 `人才画像模板.html` 作为参考文件。
-5. 通过候选人查询、岗位推荐、面试进展和“人才画像”等问题验证结果。
+4. 将两个 Space 设为知识源，完成配置后发布 Agent。
+5. 在桌面端打开 Agent，通过候选人查询、岗位推荐、面试进展和“人才画像”等问题验证结果。
 
 配套材料：
 
-- [Workshop 手册](HR-Quick-Workshop/00%20HR候选人分析助手/HR面试助手_Workshop手册.pdf)
-- [演示视频](HR-Quick-Workshop/00%20HR候选人分析助手/HR面试助手demo.m4v)
-- [人才画像 HTML 模板](HR-Quick-Workshop/00%20HR候选人分析助手/人才画像模板.html)
+- [Workshop 手册](HR-Quick-Workshop/00%20HR候选人分析助手/00%20HR候选人分析助手操作手册.pdf)
 - [面试进展跟踪表](HR-Quick-Workshop/00%20HR候选人分析助手/面试进展跟踪表.xlsx)
 - [岗位 JD 目录](HR-Quick-Workshop/00%20HR候选人分析助手/JD)
 
-| 模块效果截图（待补充） |
-| --- |
-| 建议放置：Chat Agent 回答候选人问题，或生成人才画像后的完整页面截图。 |
-
-<!-- 截图补充后，可将上表替换为：
 ![HR 候选人分析助手效果](docs/images/00-candidate-analysis.png)
--->
 
 ### 01｜岗位调研与面试题纲准备工作流
 
@@ -97,16 +89,9 @@
 配套材料：
 
 - [Workshop 手册](HR-Quick-Workshop/01%20岗位调研与面试题纲准备工作流/岗位调研_Flows_Workshop手册.pdf)
-- [演示视频](HR-Quick-Workshop/01%20岗位调研与面试题纲准备工作流/岗位调研与面试提纲准备工作流demo.m4v)
 - [面试题纲模板](HR-Quick-Workshop/01%20岗位调研与面试题纲准备工作流/interview_outline_template.docx)
 
-| 模块效果截图（待补充） |
-| --- |
-| 建议放置：完整 Flow 画布，或 Run Mode 中生成市场报告、候选人和面试题纲的结果截图。 |
-
-<!-- 截图补充后，可将上表替换为：
 ![岗位调研与面试题纲工作流效果](docs/images/01-interview-flow.png)
--->
 
 ### 02｜简历结构化抽取与人才 Dashboard
 
@@ -130,13 +115,7 @@ Skill 支持增量处理和定时运行，结构化字段包括姓名、年龄�
 - [简历入库 Skill](HR-Quick-Workshop/02%20简历结构化抽取%20%20&%20人才%20Dashboard/resume-intake-pipeline-SKILL.md)
 - [初始及补充简历](HR-Quick-Workshop/简历)
 
-| 模块效果截图（待补充） |
-| --- |
-| 建议放置：人才库 Dashboard 全景截图，优先展示 KPI、学历饼图、工作年限柱状图和筛选器。 |
-
-<!-- 截图补充后，可将上表替换为：
 ![简历结构化与人才 Dashboard 效果](docs/images/02-talent-dashboard.png)
--->
 
 ### 03｜人才成长可视化
 
@@ -168,13 +147,7 @@ Skill 支持增量处理和定时运行，结构化字段包括姓名、年龄�
 - [Quick App 技术规范](HR-Quick-Workshop/03%20人才成长可视化/technicalSpec.md)
 - [人才成长信息](HR-Quick-Workshop/03%20人才成长可视化/人才成长信息)
 
-| 模块效果截图（待补充） |
-| --- |
-| 建议放置：人才成长 App 全屏截图，确保 KPI、雷达图、气泡图、热力图和排行榜均可见。 |
-
-<!-- 截图补充后，可将上表替换为：
 ![人才成长可视化 App 效果](docs/images/03-talent-growth-app.png)
--->
 
 ### 04｜定期市场人才趋势分析与招聘建议
 
@@ -201,13 +174,7 @@ Skill 支持增量处理和定时运行，结构化字段包括姓名、年龄�
 
 - [Deep Research 操作指南](HR-Quick-Workshop/04%20定期市场人才趋势分析+招聘建议/04%20定期市场人才趋势分析+招聘建议.pdf)
 
-| 模块效果截图（待补充） |
-| --- |
-| 建议放置：Deep Research 报告首页，或包含趋势结论、薪资变化和招聘建议的报告页面。 |
-
-<!-- 截图补充后，可将上表替换为：
 ![市场人才趋势分析报告效果](docs/images/04-market-research.png)
--->
 
 ## 目录结构
 
@@ -215,14 +182,11 @@ Skill 支持增量处理和定时运行，结构化字段包括姓名、年龄�
 HR-Quick-Workshop/
 ├── README.md
 ├── 00 HR候选人分析助手/
-│   ├── HR面试助手_Workshop手册.pdf
-│   ├── HR面试助手demo.m4v
+│   ├── 00 HR候选人分析助手操作手册.pdf
 │   ├── JD/
-│   ├── 人才画像模板.html
 │   └── 面试进展跟踪表.xlsx
 ├── 01 岗位调研与面试题纲准备工作流/
 │   ├── 岗位调研_Flows_Workshop手册.pdf
-│   ├── 岗位调研与面试提纲准备工作流demo.m4v
 │   └── interview_outline_template.docx
 ├── 02 简历结构化抽取  & 人才 Dashboard/
 │   ├── 02 简历结构化抽取 & 人才 Dashboard 创建指南.pdf
@@ -247,9 +211,9 @@ HR-Quick-Workshop/
 - Deep Research 会要求确认研究计划；批准后任务才会在后台执行。
 - AI 输出用于辅助 HR 判断，不应替代必要的人工审核、面试评估与合规检查。
 
-## 截图补充约定
+## 项目截图
 
-建议在仓库根目录创建 `docs/images/`，并使用以下文件名：
+README 中使用的模块截图统一存放在 `docs/images/`：
 
 ```text
 docs/images/
@@ -260,4 +224,4 @@ docs/images/
 └── 04-market-research.png
 ```
 
-截图准备好后，将各模块中的占位表格替换为旁边 HTML 注释里预留的 Markdown 图片语句即可。
+如需替换截图，请保持文件名不变，以免 README 中的图片链接失效。
