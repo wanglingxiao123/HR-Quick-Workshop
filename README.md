@@ -88,7 +88,7 @@
 
 配套材料：
 
-- [Workshop 手册](HR-Quick-Workshop/01%20岗位调研与面试题纲准备工作流/岗位调研_Flows_Workshop手册.pdf)
+- [Workshop 手册](HR-Quick-Workshop/01%20岗位调研与面试题纲准备工作流/01%20岗位调研与面试题纲准备工作流.pdf)
 - [面试题纲模板](HR-Quick-Workshop/01%20岗位调研与面试题纲准备工作流/interview_outline_template.docx)
 
 ![岗位调研与面试题纲工作流效果](docs/images/01-interview-flow.png)
@@ -144,7 +144,7 @@ Skill 支持增量处理和定时运行，结构化字段包括姓名、年龄�
 配套材料：
 
 - [操作手册](HR-Quick-Workshop/03%20人才成长可视化/03%20人才成长可视化操作手册.pdf)
-- [Quick App 技术规范](HR-Quick-Workshop/03%20人才成长可视化/technicalSpec.md)
+- [附件.md](HR-Quick-Workshop/03%20人才成长可视化/technicalSpec.md)
 - [人才成长信息](HR-Quick-Workshop/03%20人才成长可视化/人才成长信息)
 
 ![人才成长可视化 App 效果](docs/images/03-talent-growth-app.png)
@@ -186,7 +186,7 @@ HR-Quick-Workshop/
 │   ├── JD/
 │   └── 面试进展跟踪表.xlsx
 ├── 01 岗位调研与面试题纲准备工作流/
-│   ├── 岗位调研_Flows_Workshop手册.pdf
+│   ├── 01 岗位调研与面试题纲准备工作流.pdf
 │   └── interview_outline_template.docx
 ├── 02 简历结构化抽取  & 人才 Dashboard/
 │   ├── 02 简历结构化抽取 & 人才 Dashboard 创建指南.pdf
