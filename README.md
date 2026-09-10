@@ -1,6 +1,6 @@
 # HR Quick Workshop
 
-基于 Amazon Quick 的 HR 全流程 AI 实践素材包。项目通过 5 个循序渐进的模块，展示如何把 Spaces、Chat Agent、Flows、Skills、Analyses / Dashboard、Apps 与 Deep Research 应用于招聘和人才管理。
+基于 Amazon Quick 的 HR 全流程 AI 实践素材包，覆盖候选人分析、岗位调研与面试准备、简历结构化与人才库分析、人才成长可视化及市场人才趋势研究五大场景，综合运用 Spaces、Chat Agent、Flows、Skills、Analyses / Dashboard、Apps 与 Deep Research。
 
 你可以按 `00 → 04` 完整体验，也可以选择单个模块独立练习。每个模块均配有 PDF 操作手册；部分模块还提供演示视频、Prompt 模板、Skill、技术规范和模拟数据。
 
